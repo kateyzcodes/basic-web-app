@@ -17,4 +17,14 @@ describe("QueryProcessor", () => {
             "writer in the English language and the world's pre-eminent dramatist."
           ));
     });
+
+    test('should return katelynz description', () => {
+        const query = "katelynz";
+        const response: string = QueryProcessor(query);
+        expect(response).toBe((
+            "Katelyn Zheng is a third year CMU student majoring "+
+            "in Information Systems with a concentration in "+
+            "Data Analytics and a minor in Social and Political History."
+          ));
+    });
 });

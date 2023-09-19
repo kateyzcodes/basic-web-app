@@ -27,4 +27,19 @@ describe("QueryProcessor", () => {
             "Data Analytics and a minor in Social and Political History."
           ));
     });
+
+    test('should add numbers', () => {
+        expect(QueryProcessor("What is 5 plus 52?")).toEqual("57");
+        expect(QueryProcessor("What is 12 plus 1?")).toEqual("13");
+    });
+
+    test('should subtract numbers', () => {
+        expect(QueryProcessor("What is 10 minus 7?")).toEqual("3");
+        expect(QueryProcessor("What is 80 minus 34?")).toEqual("46");
+    });
+
+    test('should multiply numbers', () => {
+        expect(QueryProcessor("What is 10 multiplied by 7?")).toEqual("70");
+        expect(QueryProcessor("What is 80 multiplied by 11?")).toEqual("880");
+    });
 });

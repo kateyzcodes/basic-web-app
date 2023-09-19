@@ -13,6 +13,23 @@ export default function QueryProcessor(query: string): string {
       "Data Analytics and a minor in Social and Political History."
     );
   }
+  // if (query.toLowerCase().includes("which of the following numbers is the largest")) {
+  //   const largestRegex = /([0-9]+),([0-9]+),([0-9]+)/;
+  //   const match = query.match(largestRegex);
+  //   return (
+  //     "Match"
+  //     // Expected output: "Width: 1440 / Height: 900."
+  //   );
+  // }
+  if (query.toLowerCase().includes("katelynz")) {
+    const addMatch = query.match(/What is (\d+) plus (\d+)/);
+    if (addMatch) {
+    const x: number = parseInt(addMatch[1]);
+    const y: number = parseInt(addMatch[2]);
+    return (x+y).toString();
+  }
+  }
+  
 
   return "";
 }

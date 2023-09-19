@@ -21,13 +21,12 @@ export default function QueryProcessor(query: string): string {
   //     // Expected output: "Width: 1440 / Height: 900."
   //   );
   // }
-  if (query.toLowerCase().includes("katelynz")) {
+  
     const addMatch = query.match(/What is (\d+) plus (\d+)/);
     if (addMatch) {
     const x: number = parseInt(addMatch[1]);
     const y: number = parseInt(addMatch[2]);
     return (x+y).toString();
-  }
   }
   
 
